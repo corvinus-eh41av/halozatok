@@ -8,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Hajosteszt
+namespace HajosTeszt
 {
     public class Startup
     {
@@ -25,11 +25,6 @@ namespace Hajosteszt
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
-
-            app.UseDefaultFiles();
-            app.UseStaticFiles(); //A sorrend fontos!
 
             app.UseRouting();
 
