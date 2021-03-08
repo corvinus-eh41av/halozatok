@@ -1,0 +1,82 @@
+﻿html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: arial;
+    margin: 0cm;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#innerleft {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    background-color: #692e3c;
+    padding: 10px;
+}
+
+#img {
+    text-align: center;
+}
+
+#nev {
+    color: white;
+    text-align: center;
+}
+
+#freetime,
+#languages,
+#etel {
+    color: white;
+}
+
+#innerright {
+    display: flex;
+    flex-direction: column;
+    flex: 3;
+    padding: 50px;
+    padding-top: 10px;
+}
+
+hr {
+    width: 80%;
+}
+
+.hr2 {
+    width: 100%;
+    border: 3px dashed #692e3c;
+}
+
+.hr3 {
+    width: auto;
+    border: 1px dashed #692e3c;
+}
+
+.kiscim {
+    text-align: center;
+    font-weight: bold;
+}
+
+.nagycim {
+    font-weight: bold;
+    color: #692e3c;
+    font-size: 2em;
+}
+
+#bigcim {
+    font-size: 3em;
+    color: #692e3c;
+    font-weight: bolder;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+img {
+    max-height: 250px;
+    border-radius: 5px;
+    border: solid 3px white;
+}
