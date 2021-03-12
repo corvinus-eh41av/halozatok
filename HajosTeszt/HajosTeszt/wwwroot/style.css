@@ -1,82 +1,136 @@
 ﻿html,
 body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Roboto Mono", monospace;
     height: 100%;
     width: 100%;
-    font-family: arial;
-    margin: 0cm;
 }
 
-#container {
-    display: flex;
-    flex-direction: row;
-}
+    /*=================BOGYOK=================*/
 
-#innerleft {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    background-color: #692e3c;
-    padding: 10px;
-}
+    body::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#ffd103, #ff7f00);
+        clip-path: circle(30% at right 90%);
+    }
 
-#img {
-    text-align: center;
-}
+    body::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(#690495, #ffd103);
+        clip-path: circle(20% at 10% 10%);
+    }
 
-#nev {
-    color: white;
-    text-align: center;
-}
+/*=================KONTÉNEREK=================*/
 
-#freetime,
-#languages,
-#etel {
-    color: white;
-}
-
-#innerright {
-    display: flex;
-    flex-direction: column;
-    flex: 3;
-    padding: 50px;
+#background {
+    height: 100%;
+    width: 100%;
+    background: #161623;
+    margin: 0;
     padding-top: 10px;
 }
 
-hr {
-    width: 80%;
+#container {
+    border-radius: 8px;
+    background-color: rgb(255, 255, 255, 0.1);
+    margin: 10px;
+    padding: 50px;
+    margin: 50px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
+    position: relative;
+    z-index: 1;
+    backdrop-filter: blur(5px);
 }
 
-.hr2 {
-    width: 100%;
-    border: 3px dashed #692e3c;
+#header {
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    color: white;
 }
 
-.hr3 {
-    width: auto;
-    border: 1px dashed #692e3c;
+#main {
+    display: flex;
+    justify-content: space-between;
 }
 
-.kiscim {
-    text-align: center;
-    font-weight: bold;
+.q {
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
 }
 
-.nagycim {
-    font-weight: bold;
-    color: #692e3c;
-    font-size: 2em;
-}
-
-#bigcim {
-    font-size: 3em;
-    color: #692e3c;
-    font-weight: bolder;
-    text-align: center;
-    padding-bottom: 50px;
+#pictures {
+    margin: 10px;
 }
 
 img {
-    max-height: 250px;
-    border-radius: 5px;
-    border: solid 3px white;
+    border-radius: 8px;
+    max-height: 350px;
+}
+
+#footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+#next {
+    margin: 10px;
+    border-radius: 8px;
+    padding: 20px;
+    color: white;
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    text-align: center;
+}
+
+#back {
+    border-radius: 8px;
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    border-top: 1px solid rgb(255, 255, 255, 0.5);
+    border-left: 1px solid rgb(255, 255, 255, 0.5);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    min-width: 200px;
+    text-align: center;
+}
+
+/*=================INTERAKTIVITÁS=================*/
+
+.q:hover {
+    color: black;
+    background: white;
+}
+
+#next:hover {
+    color: black;
+    background: white;
+}
+
+#back:hover {
+    color: black;
+    background: white;
 }
