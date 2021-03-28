@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title></title>
     <link href="style.css" rel="stylesheet">
+    <script src="hetedik.js"></script>
 </head>
 <body>
     <div id="background">
@@ -11,16 +12,16 @@
             <div id="header">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus fugiat in recusandae sit optio cupiditate maxime voluptatem ut earum unde!</div>
             <div id="main">
                 <div id="questions">
-                    <div class="q">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</div>
-                    <div class="q">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</div>
-                    <div class="q">Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</div>
+                    <div class="q" onclick="eval(0, this)"><p id="a" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</p></div>
+                    <div class="q" onclick="eval(1, this)"><p id="b" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</p></div>
+                    <div class="q" onclick="eval(2, this)"><p id="c" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, doloremque!</p></div>
                 </div>
                 <div id="pictures">
-                    <div id="image"><img src="img.png" alt="Cica"></div>
+
                 </div>
             </div>
             <div id="footer">
-                <div id="next"><a href="jsgyak.html">JSGYAK</a></div>
+                <div id="next" onclick="change()">Next</div>
                 <div id="back">Back</div>
             </div>
         </div>

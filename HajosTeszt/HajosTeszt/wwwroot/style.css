@@ -7,43 +7,19 @@ body {
     width: 100%;
 }
 
-    /*=================BOGYOK=================*/
-
-    body::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#ffd103, #ff7f00);
-        clip-path: circle(30% at right 90%);
-    }
-
-    body::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(#690495, #ffd103);
-        clip-path: circle(20% at 10% 10%);
-    }
-
 /*=================KONTÉNEREK=================*/
 
 #background {
     height: 100%;
     width: 100%;
-    background: #161623;
+    background: linear-gradient(#dbcfb4, #a89f8a);
     margin: 0;
     padding-top: 10px;
 }
 
 #container {
     border-radius: 8px;
-    background-color: rgb(255, 255, 255, 0.1);
+    background-color: rgb(255, 255, 255, 0.2);
     margin: 10px;
     padding: 50px;
     margin: 50px;
@@ -52,7 +28,7 @@ body {
     border-left: 1px solid rgb(255, 255, 255, 0.5);
     position: relative;
     z-index: 1;
-    backdrop-filter: blur(5px);
+
 }
 
 #header {
@@ -62,7 +38,7 @@ body {
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    color: white;
+    color: #5c4e30;
 }
 
 #main {
@@ -77,11 +53,18 @@ body {
     margin: 20px;
     padding: 20px;
     border-radius: 8px;
-    color: white;
+    color: #5c4e30;
+    transition: 0.5s;
 }
 
 #pictures {
     margin: 10px;
+    flex: 1;
+}
+
+#questions {
+    margin: 10px;
+    flex: 1;
 }
 
 img {
@@ -98,39 +81,40 @@ img {
     margin: 10px;
     border-radius: 8px;
     padding: 20px;
-    color: white;
+    color: #5c4e30;
     border-top: 1px solid rgb(255, 255, 255, 0.5);
     border-left: 1px solid rgb(255, 255, 255, 0.5);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     min-width: 200px;
     text-align: center;
+    transition:0.5s;
 }
 
 #back {
     border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    color: white;
+    color: #5c4e30;
     border-top: 1px solid rgb(255, 255, 255, 0.5);
     border-left: 1px solid rgb(255, 255, 255, 0.5);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
     min-width: 200px;
     text-align: center;
+    transition: 0.5s;
 }
+
+
 
 /*=================INTERAKTIVITÁS=================*/
 
 .q:hover {
-    color: black;
-    background: white;
+    transform: scale(1.2);
 }
 
 #next:hover {
-    color: black;
-    background: white;
+    transform: scale(1.2);
 }
 
 #back:hover {
-    color: black;
-    background: white;
+    transform: scale(1.2);
 }
