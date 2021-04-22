@@ -12,20 +12,19 @@ namespace EmptyBoat.Controllers
     [ApiController]
     public class TesztController2 : ControllerBase
     {
-        public class TesztController : ControllerBase
-        {
-            [HttpGet]
-            [Route("corvinus/szerverido")]
-            public IActionResult M1()
-            {
-                string pontosIdő = DateTime.Now.ToShortTimeString();
 
-                return new ContentResult
-                {
-                    ContentType = System.Net.Mime.MediaTypeNames.Text.Plain, //"text/plain"
-                    Content = pontosIdő
-                };
-            }
+        [HttpGet]
+        [Route("corvinus/szerverido")]
+        public IActionResult M1()
+        {
+            string pontosIdő = DateTime.Now.ToShortTimeString();
+
+            return new ContentResult
+            {
+                ContentType = System.Net.Mime.MediaTypeNames.Text.Plain, //"text/plain"
+                Content = pontosIdő
+            };
         }
+
     }
 }
