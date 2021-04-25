@@ -5,7 +5,7 @@ body {
     font-family: "Roboto Mono", monospace;
     height: 100%;
     width: 100%;
-    
+    background:#dbcfb4
 }
 
 /*=================KONTÉNEREK=================*/
@@ -13,7 +13,6 @@ body {
 #background {
     height: 100%;
     width: 100%;
-    background: linear-gradient(#dbcfb4, #a89f8a);
     margin: 0;
     padding-top: 10px;
 }

@@ -11,7 +11,26 @@
         fetch('/questions/all')
             .then(response => response.json())
             .then(data => console.log(data)
-        );
+            );
+    </script>
+
+    <div id="eredmeny"></div>
+
+    <script>
+        fetch('/questions/all')
+            .then(response => response.json())
+            .then(data => kiiratás(data)
+
+            );
+
+        function kiiratás(lista) {
+            console.log(lista)
+            for (var i = 0; i < lista.length; i++) {
+                let újElem = document.createElement("div");
+                újElem.innerText = lista[i];
+                document.getElementById("eredmeny").appendChild(újElem);
+            }
+        }
     </script>
 </body>
 </html>

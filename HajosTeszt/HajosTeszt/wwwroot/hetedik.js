@@ -15,6 +15,11 @@ function download()
         });
 }
 
+fetch('/questions/4')
+    .then(response => response.json())
+    .then(data => console.log(data)
+    );
+
 function finished(d) {
     console.log("Sikeres letöltés")
     console.log(d)
