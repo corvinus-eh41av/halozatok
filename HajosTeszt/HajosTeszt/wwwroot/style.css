@@ -10,6 +10,14 @@ body {
 
 /*=================KONTÉNEREK=================*/
 
+.rossz {
+    color:red;
+}
+
+.jo {
+    color:green;
+}
+
 #background {
     height: 100%;
     width: 100%;
