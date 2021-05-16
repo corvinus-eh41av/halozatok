@@ -9,9 +9,7 @@ function download()
         .then(Response => Response.json())
         .then(data => {
             finished(data);
-            appear(data);
-
-            
+            appear(data);   
         });
 }
 

@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <form>
+        <div id="jokeList"></div>
+        <div>
+            <input id="jokeText" type="text" placeholder="Csak PC vicc" />
+        </div>
+        <button id="addButton">Új vicc felvétele</button>
+        <br />
+        <div id="here">asd</div>
+        <br />
+        <div id="next" onclick="forward()">Előre</div>
+        <br />
+        <div id="back" onclick="backward()">Hátra</div>
+    </form>
+    <script>
+        document.getElementById("addButton").addEventListener("click", () => {
+
+            //Ezt az objektumot fogjuk átküldeni
+            let data = {
+                jokeText: document.getElementById("jokeText").value
+            }
+
+            fetch("api/jokes",
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                }).then(x => {
+                    if (x.ok) {
+                        alert("Siker");
+
+                    }
+                    else {
+                        alert("Kudarc");
+                    }
+                });
+
+            
+        });
+
+        var n = 1;
+
+        function download(id) {
+            fetch(`api/jokes/${id}`)
+                .then(Response => Response.json())
+                .then(data => {
+                    finished(data);
+                    appear(data);
+
+
+                });
+        }
+
+        function finished(d) {
+            console.log("Sikeres letöltés")
+            console.log(d)
+            question = d;
+        }
+
+        function appear(data) {
+            here.innerText = data.jokeText;
+        }
+
+        window.onload = (event) => {
+            download(n)
+        };
+
+        function forward() {
+            n = n + 1;
+            download(n);
+        }
+
+        function backward() {
+            if (n===0) {
+                return;
+            }
+            else {
+                n = n - 1;
+                download(n);
+            }
+        }
+    </script>
+</body>
+</html>
